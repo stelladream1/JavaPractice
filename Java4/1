@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class prca {
+
+	String string;
+	int i;
+	int j;
+	
+	public prca(String string, int i, int j) {
+		this.string = string;
+		this.i=i;
+		this.j=j;
+		
+	}
+
+
+	public void show( ) {
+		System.out.print(string+"에서 만든 "+ i+"년형 "+j+"인치 TV");
+	}
+
+
+
+	public static void main(String[] args) {
+		 
+		prca myTV = new prca("LG",2017,32);
+	
+		myTV.show();
+	
+	}
+
+
+
+
+
+}
+	      
