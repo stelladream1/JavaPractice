@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+class Phone {
+	   private String name;
+	   private String tel;
+	   Phone(String name, String tel) {
+	      this.name = name;
+	      this.tel = tel;
+	   }
+	   public String getName() {
+	      return name;
+	   }
+	   public String getTel() {
+	      return tel;
+	   }
+	}
+
+
+public class PhoneBook {
+ 
+public static void main(String[] args) {
+      // TODO Auto-generated method stub
+	Scanner sc = new Scanner(System.in);
+	 System.out.print("인원: ");
+	   int num = sc.nextInt();
+	   String name,tel;
+	   Phone phone[] = new Phone[num];
+	   
+			for(int i=0;i<phone.length;i++) {
+	   		System.out.print("이름,전화번호 ");
+	   		name = sc.next();
+	   		tel = sc.next();
+	   		phone[i]= new Phone(name,tel);
+			}
+			System.out.println("저장완료 ");
+	  
+	while(true) {
+		System.out.print("검색할 이름");
+		String sreach = sc.next();
+		if(sreach.equals("그만")) {
+			sc.close();
+			break;
+		}
+		
+		for(int i=0;i<phone.length;i++) {
+			if(sreach.equals(phone[i].getName()))  {
+				System.out.println(phone[i].getTel());
+				break;
+		}
+		
+			else if (!sreach.equals(phone[i].getName())&&i==phone.length-1)
+				System.out.println("일치 x");
+			
+			
+		
+
+		
+		}
+				
+	}
+}
+}
