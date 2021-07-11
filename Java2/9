@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class prca {
+
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("입력:");
+		int circlex = scanner.nextInt();
+		int circley = scanner.nextInt();
+		double r = scanner.nextDouble();
+		System.out.print("점입력:");
+		int x = scanner.nextInt();
+		int y = scanner.nextInt();
+		
+		double distance = Math.sqrt((circlex-x)*(circlex-x)+(circlex-y)*(circlex-y));
+		System.out.println(distance);
+	
+
+		if(distance <=r)
+			System.out.println("안에 있음");
+		else
+			System.out.println("밖에 있음");
+		
+	}
+}
