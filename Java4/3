@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class prca {
+
+	String title;
+	String artist;
+	int year;
+	String country;
+	public prca() 
+	{
+		
+	}
+	public prca(String title,String artist, int year, String country) {
+		
+		this.title = title;
+		this.artist = artist;
+		this.year= year;
+		this.country=country;
+		
+	}
+
+
+	public void show( ) {
+		System.out.print(year+"년 "+country+"국적의 "+artist+"가 부른 "+title);
+	}
+
+
+
+	public static void main(String[] args) {
+		Scanner scanner= new Scanner(System.in);
+		
+		
+		prca song = new prca();
+		song.title = "Dancing queen";
+		song.country="스웨덴";
+		song.artist="ABBA";
+		song.year=1978;
+		
+		song.show();
+		scanner.close();
+	
+	}
+
+
+
+
+
+}
