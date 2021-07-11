@@ -1,0 +1,42 @@
+public Circle(double x ,double y, int radius) {
+		
+		this.x = x;
+		this.y = y;
+		this.radius= radius;
+		
+	}
+
+
+	public void show() {
+		System.out.println("("+ x +","+y+")"+radius);
+	}
+	public int rad() {
+		return radius;
+	}
+}
+
+public class prca {
+		
+		public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		Circle c[] = new Circle [3];
+		int max = 0;
+		for(int i =0;i<c.length;i++) {
+			double x = scanner.nextDouble();
+			double y = scanner.nextDouble();
+			int radius = scanner.nextInt();
+			
+			c[i] = new Circle ( x,y,radius);
+		}
+		
+		for(int i =0;i<c.length;i++) {
+			if(max<c[i].rad()) {
+				max = c[i].rad();
+				}
+		}
+		for(int i =0;i<c.length;i++)
+			if(max == c[i].rad())
+				c[i].show();
+
+		}
+}
